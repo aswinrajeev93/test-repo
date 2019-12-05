@@ -80,12 +80,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
+		<dependency>
+	    <groupId>com.amazonaws</groupId>
+	    <artifactId>codeguru-profiler-java-agent</artifactId>
+	    <version>0.1.0</version>
+	  </dependency>
 	</dependencies> 
 	<repositories>
 		<repository>
-			<id>jfrog-artifactory</id>
-			<url>http://3.14.65.175:8081/artifactory/libs-snapshot-local</url>
-		</repository>
+	    <id>codeguru-profiler</id>
+	    <name>codeguru-profiler</name>
+	    <url>https://d1osg35nybn3tt.cloudfront.net</url>
+	  </repository>
 	</repositories>
 	<build>
 	<plugins>
