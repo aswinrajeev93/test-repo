@@ -1,0 +1,42 @@
+name: "Find batch by"  
+request:  
+ method: GET
+ url: /v1/data/batches
+ body:
+  headers:
+    Content-Type: application/json  
+response:  
+ status: 200
+ body: 
+  _results:
+   _id: 
+    type: by_regex
+    predefined: string
+    _links:
+     _idRef:
+        href: 
+          type: by_regex
+          predefined: url
+  _id: 
+    type: by_regex
+    predefined: string
+    _links:
+      _idRref:
+        href:
+          type: by_regex
+          predefined: number 
+  _links:
+    _self:
+      href: 
+        type: by_regex
+        predefined: url
+  _next:
+    href: 
+      type: by_regex
+      predefined: url
+  _prev:
+    href: 
+      type: by_regex
+      predefined: url
+  headers:
+    Content-Type: application/json           

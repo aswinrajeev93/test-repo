@@ -1,0 +1,38 @@
+name: "get processing status"  
+request:  
+ method: GET
+ url: /v1/data/batches/{batchId}/process{code}/executions
+ body:
+  batchId: 102420
+  code: FL01
+  headers:
+    Content-Type: application/json  
+response:  
+ status: 200
+ body: 
+  executionInstances:
+    batchId:
+      _id: 
+       type: by_regex
+       predefined: number
+      _links:
+        _idRef:
+          href: 
+            type: by_regex
+            predefined: url
+    executions:
+      _id: 
+        type: by_regex
+        predefined: number
+      _links:
+        _idRef:
+          href: 
+            type: by_regex
+            predefined: url
+  _links:
+   _self:
+     href: 
+      type: by_regex
+      predefined: url
+   headers:
+     Content-Type: application/json     

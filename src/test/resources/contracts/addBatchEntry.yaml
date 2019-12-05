@@ -1,0 +1,28 @@
+name: "add bacth entry"  
+request:  
+ method: PUT
+ url: /v1/data/batches/{batchId}/process{code}/executions/{executionId}
+ body:
+  batchId: 10001
+  process: FL01
+  executionId: 10002
+  headers:
+    Content-Type: application/json  
+response:  
+ status: 200
+ body: 
+  _links:
+  batch:
+    href:
+      type: by_regex
+      predefined: url
+  executionTracker:
+    href: 
+      type: by_regex
+      predefined: url
+  executionHistory:
+    href:  
+      type: by_regex
+      predefined: url
+  headers:
+    Content-Type: application/json           

@@ -1,0 +1,60 @@
+name: "Find batch by batchId and process"  
+request:  
+ method: GET
+ url: /v1/data/batches/{batchId}/process/{process}
+ body:
+  batchId: 102420
+  process: FL01
+  headers:
+    Content-Type: application/json  
+response:  
+ status: 200
+ body: 
+  batchNumber: 15004
+  loadFileId: 1005
+  loadFileName: M01
+  createdOn: '2019-10-18T15:47:50.640+0000'
+  createdBy: MeS
+  source:
+    code: Source - TD
+    type: by_regex
+    predefined: non_empty
+    name: TD
+    type: by_regex
+    predefined: non_empty
+  process: {}
+  batchId: 
+    _id:
+      type: by_regex
+      predefined: number
+    _links:
+      _self:
+        href: 
+          type: by_regex
+          predefined: url
+  terminalId: 
+    _id:
+       type: by_regex
+       predefined: number
+    _links:
+      _self:
+        href:
+          type: by_regex
+          predefined: url
+  merchantId: 
+    _id:
+       type: by_regex
+       predefined: number
+    _links:
+      _self:
+        href:
+          type: by_regex
+          predefined: url
+  _links:
+    _self:
+      href:
+        type: by_regex
+        predefined: url 
+   
+  headers:
+    Content-Type: application/json           

@@ -1,0 +1,33 @@
+name: "Insert List of Batch Data"  
+request:  
+ method: PUT
+ url: /v1/data/batches
+ body:
+  batchId: 102420
+  batchNumber: 8121
+  loadFileId: 4
+  loadFileName: '4'
+  createdBy: '0'
+  createdOn: '3914-04-23T18:30:00.000+0000'
+  merchantNumber: 8
+  terminalId: '1'
+  process: FL01
+  source: PG
+
+  headers:
+    Content-Type: application/json  
+response:  
+ status: 201
+ body: 
+  batchId: 
+    _id:
+      type: by_regex
+      predefined: number
+    _links:
+      _self:
+        href: 
+          type: by_regex
+          predefined: url
+
+  headers:
+    Content-Type: application/json           

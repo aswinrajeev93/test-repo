@@ -1,0 +1,79 @@
+name: "getBatchesSingleUnprocessed"  
+request:  
+ method: PUT
+ url: /v1/data/batches/single-unprocessed
+ body:
+  headers:
+    Content-Type: application/json  
+response:  
+ status: 200
+ body: 
+  batch:
+    source:
+      code: 
+        type: by_regex
+        predefined: string
+      name: 
+        type: by_regex
+        predefined: string
+      process:
+       code:
+         type: by_regex
+         predefined: string 
+       name: 
+         type: by_regex
+         predefined: string
+       description: 
+          type: by_regex
+          predefined: string 
+  batchId:
+    _id:
+      type: by_regex
+      predefined: number  
+    _links:
+      _idRef:
+        href:
+          type: by_regex
+          predefined: url 
+  merchant:
+    _id: 
+      type: by_regex
+      predefined: number 
+    _links: 
+      _idRef:
+        href: 
+          type: by_regex
+          predefined: url
+  terminal:
+    _id: 
+      type: by_regex
+      predefined: number 
+    _links:
+      _idRef:
+        href:
+          type: by_regex
+          predefined: url 
+  batchNumber:
+    type: by_regex
+    predefined: number  
+  loadFileId: 
+    type: by_regex
+    predefined: number 
+  loadFileName:
+    type: by_regex
+    predefined: string 
+  createdBy: 
+    type: by_regex
+    predefined: string
+  createdOn: 
+  updatedBy: 
+    type: by_regex
+    predefined: string
+  updatedOn: 
+  _links:
+    _self:
+      href:
+        type: by_regex
+        predefined: url 
+  headers:
+    Content-Type: application/json           

@@ -1,0 +1,12 @@
+name: "Delete Batch Data"  
+request:  
+ method: DELETE
+ url: /v1/data/batches/{bachId}
+ body:
+  batchId: 1001
+  headers:
+    Content-Type: application/json  
+response:  
+ status: 204
+ headers:
+   Content-Type: application/json           
